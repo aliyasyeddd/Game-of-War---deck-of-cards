@@ -36,8 +36,6 @@ It’s perfect for beginners learning how to work with **fetch APIs**, **DOM man
 
 Here are the key JavaScript concepts practiced while building this project 🧩  
 
-![What we have studied](./images/what-we-studied.png)  
-
 > Concepts practiced include:  
 > `fetch()`, `.then()`, API calls, event listeners, DOM manipulation, template strings, array methods, game state updates, conditional logic.
 
@@ -54,14 +52,14 @@ Here are the key JavaScript concepts practiced while building this project 🧩
 
 ## 🖼️ Screenshots / Demo  
 
-![App Screenshot](./images/demo.png)  
+![App Screenshot](./img/demo.png)  
 
-🔗 **Live Demo:** https://your-demo-link.vercel.app  
+🔗 **Live Demo:** 
 
 ---
 
 ## 💫 Author  
-👩‍💻 **Created by [Your Name](https://github.com/yourusername)**  
+👩‍💻 **Created by [Your Name](https://https://github.com/aliyasyeddd/)**  
 > _“Build. Break. Learn. Repeat.”_ 🌸  
 
 ---
