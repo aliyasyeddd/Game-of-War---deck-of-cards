@@ -10,6 +10,7 @@ function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
         .then(res => res.json())
         .then(data => {
+                        remainingCards.textContent = `Remaining cards: ${data.remaining}`
             deckId = data.deck_id
             return deckId
         }
@@ -22,6 +23,7 @@ drawCardBtn.addEventListener("click", () => {
     fetch(` https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
         .then(res => res.json())
         .then(data => {
+                        remainingCards.textContent = `Remaining cards: ${data.remaining}`
             cardsContainer.children[0].innerHTML =
                 `
                   <img src=${data.cards[0].image} class="card" alt="deck of cards">
@@ -31,7 +33,9 @@ drawCardBtn.addEventListener("click", () => {
                   <img src=${data.cards[1].image} class="card"  alt="deck of cards">
                 `
             header.textContent = determineCardWinner(data.cards[0], data.cards[1])
-            remainingCards.textContent = data.remaining
+            if (data.remaining === 0) {
+                drawCardBtn.disabled = true
+            }
         })
 })
 
