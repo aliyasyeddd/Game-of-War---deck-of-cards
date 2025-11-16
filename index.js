@@ -18,8 +18,11 @@ document.getElementById("draw-cards").addEventListener("click", () => {
         .then(data => {
             document.getElementById("cards").children[0].innerHTML =
                 `
-              <img src=${data.cards[0].image} class="card" alt="deck of cards">
-              <img src=${data.cards[1].image}class="card"  alt="deck of cards">
-           `
+                  <img src=${data.cards[0].image} class="card" alt="deck of cards">
+                `
+             document.getElementById("cards").children[1].innerHTML =
+                `
+                  <img src=${data.cards[1].image} class="card"  alt="deck of cards">
+                `
         })
 })
