@@ -9,23 +9,19 @@ const remainingCards = document.getElementById("remaining-cards")
 const computerScoreEl = document.getElementById("computer-score")
 const myScoreEl = document.getElementById("my-score")
 
-function handleClick() {
-    fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
-        .then(res => res.json())
-        .then(data => {
+async function handleClick() {
+    const response = await fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+    const data = await response.json()
             remainingCards.textContent = `Remaining cards: ${data.remaining}`
             deckId = data.deck_id
             return deckId
-        }
-        )
 }
 
 newDDeckBtn.addEventListener("click", handleClick)
 
-drawCardBtn.addEventListener("click", () => {
-    fetch(` https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
-        .then(res => res.json())
-        .then(data => {
+drawCardBtn.addEventListener("click", async() => {
+    const response = await fetch(` https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
+    const data = await response.json()
             remainingCards.textContent = `Remaining cards: ${data.remaining}`
             cardsContainer.children[0].innerHTML =
                 `
@@ -47,7 +43,7 @@ drawCardBtn.addEventListener("click", () => {
                 }
             }
         })
-})
+
 
 function determineCardWinner(card1, card2) {
     const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9",
