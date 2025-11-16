@@ -59,7 +59,7 @@ Here are the key JavaScript concepts practiced while building this project 🧩
 ---
 
 ## 💫 Author  
-👩‍💻 **Created by [Your Name](https://https://github.com/aliyasyeddd/)**  
+👩‍💻 **Created by Aliya(https://github.com/aliyasyeddd/)**  
 > _“Build. Break. Learn. Repeat.”_ 🌸  
 
 ---
